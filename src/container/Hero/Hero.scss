@@ -1,0 +1,52 @@
+///////////////////////////////////////
+// SWIPER
+///////////////////////////////////////
+.swiper {
+	&-slide {
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	// OVERRIDES
+	.swiper-pagination-bullet {
+		width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 16px));
+		height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 16px));
+		border-radius: 0;
+		opacity: var(--swiper-pagination-bullet-inactive-opacity, 0.5);
+
+		&-active {
+			opacity: var(--swiper-pagination-bullet-opacity, 1) !important;
+		}
+	}
+
+	.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+	.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+		margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 10px);
+	}
+
+	// END OF OVERRIDES
+
+	&-hero {
+		.swiper-slide {
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+			// min-height: 640px;
+		}
+
+		.bg-img1 {
+			background-image: url(../../assets/leonardo_manchester_piccadilly_01_lobby.jpg);
+		}
+		.bg-img2 {
+			background-image: url(../../assets/walton_court_3.jpg);
+		}
+		.bg-img3 {
+			background-image: url(../../assets/lidl_hersham_1.jpg);
+		}
+		.bg-img4 {
+			background-image: url(../../assets/london_borough_barnet_office_8.jpg);
+		}
+	}
+}

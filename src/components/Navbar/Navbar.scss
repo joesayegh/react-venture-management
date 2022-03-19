@@ -1,0 +1,274 @@
+///////////////////////////////////////
+// HEADER
+///////////////////////////////////////
+
+.header {
+	// .header-bg
+	// &-bg {
+	// 	// background-color: var(--bg);
+	// 	// background-image: url(img/hero-768-min.jpg);
+	// 	background-image: url(https://via.placeholder.com/768x288?text=Slide+1);
+	// 	background-size: cover;
+	// 	background-position: 50% 50%;
+	// 	background-repeat: no-repeat;
+	// 	min-height: 960px;
+	// 	max-height: 100vh;
+
+	// 	@media screen and (min-width: 769px) {
+	// 		background-image: url(https://via.placeholder.com/1280x480?text=Slide+1);
+	// 	}
+
+	// 	@media screen and (min-width: 1281px) {
+	// 		background-image: url(https://via.placeholder.com/1920x720?text=Slide+1);
+	// 	}
+
+	// 	@media screen and (min-width: 1921px) {
+	// 		background-image: url(https://via.placeholder.com/2560x960?text=Slide+1);
+	// 	}
+	// }
+
+	// .header-nav-wrapper
+	&-nav-wrapper {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 20px 0;
+		text-transform: uppercase;
+		// ADDED TO FACTOR IN FULL HEIGHT OF HERO
+		height: 86px;
+
+		// .header-nav-wrapper .logo
+		.logo {
+			width: 200px;
+			height: 46px;
+
+			svg,
+			img {
+				fill: var(--text);
+				// fill: var(--bg);
+			}
+		}
+
+		// .header-nav-wrapper .primary-nav-wrapper
+		.primary-nav-wrapper {
+			position: fixed;
+			z-index: 99;
+			top: 0;
+			left: 0;
+			opacity: 0;
+			visibility: hidden;
+			transition: all 400ms;
+			width: 100%;
+			height: 100%;
+
+			@media screen and (min-width: 768px) {
+				position: relative;
+				opacity: 1;
+				visibility: visible;
+				width: auto;
+				height: auto;
+			}
+
+			&.open {
+				visibility: visible;
+				opacity: 1;
+				background-color: rgba(0, 0, 0, 0.85);
+
+				@media screen and (min-width: 768px) {
+					background-color: transparent;
+				}
+
+				// OVERRIDE - REMOVE THE RED LINE EFFECT
+				a:before {
+					display: none;
+				}
+			}
+		}
+
+		// .header-nav-wrapper nav
+		nav {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			// padding-top: 5px;
+			// padding-left: 30px;
+
+			ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+
+				@media screen and (min-width: 768px) {
+					display: inline-block;
+					margin: 0;
+					padding: 0;
+				}
+
+				li {
+					font-size: 1rem;
+					padding: 5px 30px 0;
+
+					@media screen and (min-width: 768px) {
+						padding: 5px 12px 0;
+						display: inline-block;
+
+						&:last-child {
+							padding-right: 0;
+						}
+					}
+
+					@media screen and (min-width: 960px) {
+						// font-size: 1rem;
+						padding: 5px 16px 0;
+					}
+
+					a {
+						display: block;
+						padding-bottom: 40px;
+						// SHOULD ALWAYS BE WHITE ON MOBILE WITH DARK BG
+						color: #fff;
+						font-weight: inherit;
+						text-decoration: none;
+						line-height: 1;
+
+						// DESKTOP
+						@media screen and (min-width: 768px) {
+							position: relative;
+							padding-bottom: 5px;
+							// transition: opacity 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+							transition: opacity 0.2s ease-in-out;
+							// -webkit-tap-highlight-color: transparent;
+							color: var(--text);
+							// color: var(--bg);
+						}
+
+						&:hover {
+							opacity: 1;
+
+							&:before {
+								visibility: visible;
+								// transform: scaleX(1);
+								max-width: 100%;
+							}
+						}
+
+						// DESKTOP
+						&:before {
+							@media screen and (min-width: 768px) {
+								content: "";
+								position: absolute;
+								bottom: 0;
+								// left: 0;
+								visibility: hidden;
+								width: 100%;
+								max-width: 0%;
+								// height: 1px;
+								height: 2px;
+								transition: 0.2s ease-in-out;
+								// transform: scaleX(0);
+								background-color: var(--text);
+								// background-color: var(--bg);
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.is-visible {
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+}
+
+button.nav-toggle {
+	// DEFAULT BUTTON OVERRIDES
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+
+	position: absolute;
+	z-index: 999;
+	top: 50%;
+	left: 50%;
+	padding: 10px 30px 10px 0px;
+	cursor: pointer;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+
+	.nav-text,
+	.active .nav-text {
+		transition: all 0s;
+	}
+
+	// BURGER
+	.bar {
+		background-color: var(--text);
+		display: block;
+		height: 1px;
+		margin-top: 0;
+		opacity: 1;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: rotate(0deg);
+		transition: transform 164ms ease-in 0s, margin 164ms ease-out 164ms;
+		width: 28px;
+		z-index: 1;
+
+		&:nth-child(1) {
+			margin-top: -5px;
+		}
+		&:nth-child(2) {
+			margin-top: 3px;
+		}
+	}
+
+	&.active .bar {
+		transition: margin 164ms ease-in, transform 164ms ease-out 164ms;
+
+		&:nth-child(1) {
+			background-color: #fff;
+			margin-top: -1px;
+			transform: rotate(45deg);
+		}
+
+		&:nth-child(2) {
+			background-color: #fff;
+			margin-top: -1px;
+			transform: rotate(-45deg);
+		}
+	}
+}
+
+.navicon {
+	position: absolute;
+	right: 6px;
+	opacity: 1;
+	visibility: visible;
+	width: 20px;
+	height: 20px;
+
+	// DESKTOP
+	@media screen and (min-width: 768px) {
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	&.fixed {
+		right: 26px;
+	}
+}
+
+.fixed {
+	position: fixed;
+	z-index: 999;
+}

@@ -1,0 +1,84 @@
+///////////////////////////////////////
+// CUSTOM CSS RESET
+///////////////////////////////////////
+
+html {
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+	// TEXT-RENDERING
+	text-rendering: optimizeLegibility;
+	// FONT SMOOTHING
+	-webkit-font-smoothing: antialiased;
+	// SMOOTH SCROLLING
+	scroll-behavior: smooth;
+	// BORDER BOX - LETS YOU ADD PADDING AND BORDER TO ELEMENTS WITHOUT INCREASING THEIR SIZE
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+	// MOBILE SAFARI - FIXES THE BLINKING EFFECT WHEN A LINK HAS BEEN HIT
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+* {
+	margin: 0;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+// REMOVE GAP AT BOTTOM OF IMAGES
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+	margin: 0 0 1rem 0;
+}
+
+#root,
+#__next {
+	isolation: isolate;
+}
+
+// WAI - WEB ACCESSIBILITY INITIATIVE
+.wai {
+	border: 0 !important;
+	border-color: transparent !important;
+	background: transparent !important;
+	position: absolute !important;
+	height: 1px !important;
+	width: 1px !important;
+	margin: -1px !important;
+	padding: 0 !important;
+	overflow: hidden !important;
+	clip-path: inset(50%) !important;
+	clip: rect(1px, 1px, 1px, 1px) !important;
+	white-space: nowrap !important;
+}

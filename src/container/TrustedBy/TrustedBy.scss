@@ -1,0 +1,17 @@
+///////////////////////////////////////
+// TRUSTED BY - SWIPER
+///////////////////////////////////////
+.trusted-by {
+	&-wrapper {
+		padding: 80px 0;
+
+		.swiper-trusted-by {
+			margin-top: 4rem;
+		}
+	}
+}
+
+.swiper-trusted-by > .swiper-wrapper {
+	transition-timing-function: linear;
+	align-items: center;
+}
