@@ -4,6 +4,8 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./ScrollToTop";
 
+import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
+
 import "./index.scss";
 import App from "./App";
 import Services from "./pages/services";
@@ -13,8 +15,6 @@ import LidlHersham from "./pages/projects/lidlHersham";
 import LondonBoroughBarnetOffice from "./pages/projects/londonBoroughBarnetOffice";
 import WaltonCourt from "./pages/projects/waltonCourt";
 import ErrorPage from "./ErrorPage";
-
-import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
 	<BrowserRouter>
@@ -34,4 +34,7 @@ ReactDOM.render(
 	document.getElementById("root")
 );
 
-reportWebVitals();
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://cra.link/PWA
+serviceWorkerRegistration.register();
