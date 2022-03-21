@@ -8,12 +8,11 @@
   "display": "standalone",
   "theme_color": "#201e1f",
   "icons": [
-  	{
-			"src": "maskable_icon.png",
-			"sizes": "1024x1024",
-			"type": "image/png",
-			"purpose": "any maskable"
-		},
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
     {
       "src": "android-chrome-192x192.png",
       "sizes": "192x192",
@@ -24,11 +23,12 @@
       "sizes": "512x512",
       "type": "image/png"
     },
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    }
+  	{
+			"src": "maskable_icon.png",
+			"sizes": "1024x1024",
+			"type": "image/png",
+			"purpose": "any maskable"
+		}
   ],
   "background_color": "#201e1f"
 }
