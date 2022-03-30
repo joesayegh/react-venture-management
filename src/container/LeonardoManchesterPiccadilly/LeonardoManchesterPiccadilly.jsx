@@ -1,19 +1,19 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 // import Swiper core and required modules
-import { Thumbs, Navigation, A11y } from "swiper";
+import { Thumbs, Navigation, A11y } from 'swiper';
 
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
-import "swiper/scss";
-import "swiper/scss/navigation";
-import "swiper/scss/pagination";
-import "swiper/scss/scrollbar";
+import 'swiper/scss';
+import 'swiper/scss/navigation';
+import 'swiper/scss/pagination';
+import 'swiper/scss/scrollbar';
 
-import { images } from "../../constants";
+import { images } from '../../constants';
 
 const LeonardoManchestPicadilly = () => {
 	// store thumbs swiper instance
@@ -34,7 +34,9 @@ const LeonardoManchestPicadilly = () => {
 						<div className="intro-flex-content">
 							<h1>Leonardo Hotel Manchester Piccadilly</h1>
 
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia exercitationem laborum debitis optio sunt quas aliquam ex maxime quidem dignissimos, neque sit distinctio magni tempore illo odio. In nobis aperiam dicta. Dolore asperiores facilis vel facere ipsum possimus placeat. Ex.</p>
+							<p>The Leonardo Hotel Manchester Piccadilly is the latest acquisition in Fattal Hotel Group’s UK Hotel Roll-Out Program. Located adjacent to Manchester Piccadilly Station, the Hotel offers circa 110,000ft of hotel space. Developed by Capital & Centric and designed by Stephenson Studio the development consists of 275 hotel rooms, built to a high specification with a ground floor bar, restaurant, wellness suite and gym.</p>
+
+							<p>Venture Management provided services on behalf of Leonardo Hotels, we acted under the Forward Purchase Agreement as the Hotel ‘Buyer’s Representative’, we also provided Project and Cost Management services in relation to the Hotel fit-out, overseeing the installation of the Leonardo’s Fixtures Fittings and Equipment. The Hotel is set to open in April 2022 and will offer a third Manchester Hotel within the group following Fattal Group’s acquisition of The Midland Hotel and the long established Jurys Inn Manchester</p>
 
 							<p>
 								<Link to="/projects">Explore our projects</Link>
